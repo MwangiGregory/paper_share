@@ -1,0 +1,16 @@
+{% extends 'uploads/base.html' %}
+
+{% block title %}Home - Paper Share{% endblock %}
+
+{% block content %}
+<h1>Welcome to the Paper Share</h1>
+<h2>Login</h2>
+<form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+</form>
+
+<!-- Add the link to register -->
+<p>Don't have an account? <a href="{% url 'register' %}">Register here</a>.</p>
+{% endblock %}

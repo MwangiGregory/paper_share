@@ -1,0 +1,268 @@
+/* General Reset for consistent styling across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Styles for unordered and ordered lists */
+ul,
+ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+/* List item styles */
+li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+/* Custom bullet styles for unordered lists */
+ul li::marker {
+    color: #4CAF50;
+    /* Green bullet color */
+    font-size: 1.2rem;
+    /* Larger bullet size */
+}
+
+/* Custom number styles for ordered lists */
+ol li::marker {
+    color: #333;
+    /* Darker number color */
+    font-size: 1.1rem;
+}
+
+/* Text styling for list items */
+li {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+    /* Dark gray text color */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Text styling for list items on hover */
+li:hover {
+    color: #4CAF50;
+    /* Green text on hover */
+    cursor: pointer;
+}
+
+/* Responsive text adjustment for smaller screens */
+@media (max-width: 768px) {
+    li {
+        font-size: 0.95rem;
+        /* Slightly smaller text for mobile */
+    }
+}
+
+/* Responsive list adjustment */
+@media (max-width: 768px) {
+
+    ul,
+    ol {
+        padding-left: 1rem;
+    }
+
+    li {
+        margin-bottom: 0.75rem;
+    }
+}
+
+/* Main container styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Flexbox layout for main content */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Styles for the main section and sidebar */
+.main-section,
+.sidebar {
+    flex: 1 1 calc(50% - 1rem);
+    padding: 1rem;
+    background-color: white;
+    margin-bottom: 1rem;
+}
+
+/* For screens smaller than 768px, make columns full-width */
+@media (max-width: 768px) {
+
+    .main-section,
+    .sidebar {
+        flex: 1 1 100%;
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Form styling */
+form {
+    background-color: #fff;
+    padding: 2rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="file"],
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Navbar */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        padding: 0.5rem 0;
+        font-size: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+@media (max-width: 600px) {
+
+    table th,
+    table td {
+        padding: 0.5rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}

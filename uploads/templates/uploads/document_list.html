@@ -1,0 +1,16 @@
+{% extends 'uploads/base.html' %}
+
+{% block title %}Documents List - Paper Share{% endblock %}
+
+{% block content %}
+<h2>Documents</h2>
+
+<ul>
+    {% for document in documents %}
+    <li>
+        <a href="{{ document.file.url }}"> {{ document.title }}</a>
+        ({{ document.document_type }})
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

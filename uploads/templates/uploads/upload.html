@@ -1,0 +1,18 @@
+{% extends 'uploads/base.html' %}
+
+{% block title %}Upload Doc - Paper Share{% endblock %}
+
+{% block content %}
+<!-- Add navigation links -->
+<a href="{% url 'document_list' %}">View Documents</a>
+<form method="POST" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+</form>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+</form>
+{% endblock %}
